@@ -1,13 +1,11 @@
 import { useState } from 'react';
-import Carousel from './components/Carousel';
-import ProductModal from './components/ProductModal';
+import Carousel from './assets/components/Carousel/Carousel';
+import ProductModal from './assets/components/ProductModal/ProductModal';
+import products from './assets/data/products.json';
 import '@google/model-viewer';
 
 function App() {
   const [selectedProductId, setSelectedProductId] = useState(null);
-
-  // In a real scenario, fetch product data from an API or context
-  const products = require('./data/products.json');
 
   const handleProductSelect = (productId) => {
     setSelectedProductId(productId);

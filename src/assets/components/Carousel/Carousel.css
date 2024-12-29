@@ -1,28 +1,17 @@
 .carousel-container {
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap; /* ensures cards are in a single row */
-    width: 100%;
-    padding: 1rem;
-    scroll-snap-type: x mandatory; /* optionally, for snapping on modern browsers */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .carousel-container {
+    grid-template-columns: repeat(6, 1fr);
   }
-  
-  .carousel-track {
-    display: inline-flex; /* keep items side by side */
-    gap: 1rem;
-  }
-  
-  .carousel-container::-webkit-scrollbar {
-    display: none; /* hide scrollbar on some browsers */
-  }
-  
-  @media (min-width: 768px) {
-    .carousel-container {
-      padding: 2rem;
-    }
-    .product-card {
-      width: 250px;
-      height: 320px;
-    }
-  }
-  
+}
+
+.product-card {
+  width: 100%;
+  height: auto;
+}

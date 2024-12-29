@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import './ProductModal.css';
 
 const ProductModal = ({ product, onClose }) => {
@@ -27,6 +27,16 @@ const ProductModal = ({ product, onClose }) => {
       </div>
     </div>
   );
+};
+
+ProductModal.propTypes = {
+  product: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }),
+  onClose: PropTypes.func.isRequired,
 };
 
 export default ProductModal;
