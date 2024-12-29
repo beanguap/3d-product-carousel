@@ -1,0 +1,39 @@
+.product-card {
+    width: 200px;
+    height: 280px;
+    perspective: 800px; /* For 3D effect */
+    margin: 1rem;
+    cursor: pointer;
+    outline: none; /* for focus styling, you can handle focus states separately */
+    transition: transform 0.3s ease;
+  }
+  
+  /* 3D hover - the .card-content is the rotating element */
+  .card-content {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  /* When hovered/focused, slightly rotate and add a box shadow/glow */
+  .product-card:hover .card-content,
+  .product-card:focus-visible .card-content {
+    transform: rotateY(10deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Optional front/back faces if you want more intricate 3D illusions */
+  .product-image {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .product-name,
+  .product-price {
+    margin: 0.5rem;
+  }
+  
