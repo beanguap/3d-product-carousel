@@ -5,7 +5,7 @@
       "price": "$99",
       "description": "Daft Punk Bomber Jacket",
       "image": "src/assets/daftpunk_bomber/scene.gltf",
-      "arModel": "/path/to/model1.glb"
+      "arModel": "src/assets/daftpunk_bomber/scene.gltf"
     },
     {
       "id": 2,

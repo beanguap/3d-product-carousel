@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Carousel from './components/Carousel';
 import ProductModal from './components/ProductModal';
+import '@google/model-viewer';
 
 function App() {
   const [selectedProductId, setSelectedProductId] = useState(null);
